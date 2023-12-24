@@ -8,6 +8,17 @@ function newWindowLoadedOnClient(){
     userCountConnection.invoke("NewWindowLoaded").then((val) => console.log({val}))
 }
 
+userCountConnection.on("updateTotalViews", (value) =>{
+    const newCountSpan = document.getElementById("totalViewsCounter");
+    newCountSpan.innerText = value.toString();    
+});
+
+userCountConnection.on("updateTotalActiveUsers", (value) =>{
+    console.log("hey")
+    const newCountSpan = document.getElementById("totalActiveUsersCounter");
+    newCountSpan.innerText = value.toString();
+});
+
 function fulfilled() {
     //do something on start
     console.log("Connection to User Hub Successful");
