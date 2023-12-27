@@ -29,7 +29,6 @@ function rejected() {
 }
 
 connection.on("subscriptionStatus", (groupsJoined, houseName, isSubscribed) => {
-
         lbl_houseJoined.innerText = groupsJoined;
 
         if (isSubscribed) {
@@ -56,7 +55,8 @@ connection.on("subscriptionStatus", (groupsJoined, houseName, isSubscribed) => {
 
             toastr.success(`You have Subscribed Successfully to ${houseName}`);
 
-        } else {
+        } 
+        else {
             switch (houseName) {
                 case 'Gryffindor':
                     btn_gryffindor.style.display = "";
