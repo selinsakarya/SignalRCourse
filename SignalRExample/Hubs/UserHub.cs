@@ -11,14 +11,18 @@ public class UserHub : Hub
     public override async Task OnConnectedAsync()
     {
         TotalActiveUsers++;
+        
         await Clients.All.SendAsync("updateTotalActiveUsers", TotalActiveUsers);
+        
         await base.OnConnectedAsync();
     }
 
     public override async Task OnDisconnectedAsync(Exception? exception)
     {
         TotalActiveUsers--;
+        
         await Clients.All.SendAsync("updateTotalActiveUsers", TotalActiveUsers);
+        
         await base.OnConnectedAsync();
     }
 
