@@ -14,7 +14,6 @@ userCountConnection.on("updateTotalViews", (value) =>{
 });
 
 userCountConnection.on("updateTotalActiveUsers", (value) =>{
-    console.log("hey")
     const newCountSpan = document.getElementById("totalActiveUsersCounter");
     newCountSpan.innerText = value.toString();
 });
