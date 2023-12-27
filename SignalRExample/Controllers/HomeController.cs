@@ -52,6 +52,11 @@ public class HomeController : Controller
 
         return Accepted();
     }
+    
+    public IActionResult HarryPotterHouse()
+    {
+        return View();
+    }
 
     public IActionResult Privacy()
     {

@@ -45,5 +45,6 @@ app.MapRazorPages();
 
 app.MapHub<UserHub>("hubs/userCount");
 app.MapHub<DeathlyHallowsHub>("hubs/deathlyHallows");
+app.MapHub<HarryPotterHouseGroupHub>("hubs/harryPotterHouseGroup");
 
 app.Run();
