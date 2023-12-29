@@ -43,7 +43,7 @@ sendButton.addEventListener("click", function (event) {
     
 });
 
-connection.on("NewMessageReceived", (message, messageCount) => {
+connection.on("newMessageReceived", (message, messageCount) => {
     notificationCounter.innerHTML = "<span>(" + messageCount + ")</span>";
 
     let li = document.createElement("li");

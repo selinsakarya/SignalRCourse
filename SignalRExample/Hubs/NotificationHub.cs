@@ -12,7 +12,7 @@ public class NotificationHub : Hub
         {
             _messages.Add(message);
             
-            await Clients.All.SendAsync("NewMessageReceived", message, _messages.Count);
+            await Clients.All.SendAsync("newMessageReceived", message, _messages.Count);
         }
     }
 
