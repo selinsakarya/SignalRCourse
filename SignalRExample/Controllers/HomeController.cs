@@ -62,6 +62,11 @@ public class HomeController : Controller
     {
         return View();
     }
+    
+    public IActionResult BasicChat()
+    {
+        return View();
+    }
 
     public IActionResult Privacy()
     {
