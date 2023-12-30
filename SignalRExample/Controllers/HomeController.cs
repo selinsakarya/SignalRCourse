@@ -9,14 +9,10 @@ namespace SignalRExample.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
     private readonly IHubContext<DeathlyHallowsHub> _deathlyHallowsHub;
 
-    public HomeController(
-        ILogger<HomeController> logger,
-        IHubContext<DeathlyHallowsHub> deathlyHallowsHub)
+    public HomeController(IHubContext<DeathlyHallowsHub> deathlyHallowsHub)
     {
-        _logger = logger;
         _deathlyHallowsHub = deathlyHallowsHub;
     }
 
