@@ -17,7 +17,7 @@ let lbl_houseJoined = document.getElementById("lbl_houseJoined");
 
 const connection = new signalR.HubConnectionBuilder()
     .withAutomaticReconnect()
-    .withUrl("/hubs/harryPotterHouseGroup", signalR.HttpTransportType.WebSockets)
+    .withUrl("/hubs/harry-potter-house-group", signalR.HttpTransportType.WebSockets)
     .build();
 
 function fulfilled() {

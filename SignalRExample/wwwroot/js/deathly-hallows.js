@@ -4,7 +4,7 @@ let wandScore = document.getElementById("wandScore");
 
 const deathlyHallowsConnection = new signalR.HubConnectionBuilder()
     .withAutomaticReconnect()
-    .withUrl("/hubs/deathlyHallows", signalR.HttpTransportType.WebSockets)
+    .withUrl("/hubs/deathly-hallows", signalR.HttpTransportType.WebSockets)
     .build();
 
 deathlyHallowsConnection.on("updateDeathlyHallowsScores", (cloak, stone, wand) => {

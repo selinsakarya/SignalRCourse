@@ -8,7 +8,7 @@ sendMessageButton.disabled = true;
 
 const connection = new signalR.HubConnectionBuilder()
     .withAutomaticReconnect()
-    .withUrl("/hubs/chat", signalR.HttpTransportType.WebSockets)
+    .withUrl("/hubs/basic-chat", signalR.HttpTransportType.WebSockets)
     .build();
 
 connection.on("newMessageReceived", (sender, message) => {

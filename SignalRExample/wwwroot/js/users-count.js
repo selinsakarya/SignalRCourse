@@ -1,6 +1,6 @@
 const userCountConnection = new signalR.HubConnectionBuilder()
     .withAutomaticReconnect()
-    .withUrl("/hubs/userCount", signalR.HttpTransportType.WebSockets)
+    .withUrl("/hubs/users-count", signalR.HttpTransportType.WebSockets)
     .build();
 
 
